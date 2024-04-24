@@ -1,0 +1,18 @@
+.DS_Store
+.vscode
+.idea
+tmp/
+
+# npm
+.npm/
+node_modules/
+npm-debug.log
+
+# test results
+/test-results/
+/playwright-report/
+
+# test files
+/playwright/.auth
+/playwright/.cache
+/.features-gen/

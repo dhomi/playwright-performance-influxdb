@@ -1,0 +1,34 @@
+{
+  "name": "e2e-playwright-bdd-ts-influxdb",
+  "author": "Beni Dhomi, QualityAccelerator",
+  "description": "E2E project",
+  "version": "1.1.0",
+  "scripts": {
+    "alles": "npx bddgen && npx playwright test",
+    "wip": "npx bddgen --tags @wip && npx playwright test",
+    "landing": "npx bddgen --tags @landing && npx playwright test",
+    "api": "npx bddgen --tags @api && npx playwright test",
+    "inloggen": "npx bddgen --tags @inloggen && npx playwright test",
+    "performance": "npx bddgen --tags @performance && npx playwright test --project chromium",
+    "snapshots": "npx bddgen --tags @snapshots && npx playwright test --project chromium",
+
+    "rapport": "npx playwright show-report",
+    "ui": "playwright test --ui",
+    "export": "npx bddgen export",
+    "bddgen": "npx bddgen",
+    "watch": "run-p watch:*",
+    "watch:bdd": "nodemon -w ./features -w ./steps -e feature,js,ts --exec 'npx bddgen'"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.36.2",
+    "@types/node": "^20.11.21",
+    "nodemon": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "playwright-bdd": "^5.4.0",
+    "toml": "^3.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.33.2"
+  }
+}
